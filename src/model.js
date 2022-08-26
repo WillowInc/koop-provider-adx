@@ -14,7 +14,7 @@ function Model(koop) {}
 // req.params.layer
 // req.params.method
 Model.prototype.getData = function (req, callback) {
-  console.log('Lets just confirm this works');
+  console.log('Lets just confirm this works.');
 
   // hand off the data to Koop
   callback(null, {});
