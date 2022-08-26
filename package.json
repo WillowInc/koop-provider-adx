@@ -12,8 +12,7 @@
   },
   "dependencies": {
     "config": "^3.2.5",
-    "koop": "^3.17.0",
-    "request": "^2.88.0"
+    "koop": "^3.17.0"
   },
   "author": "Mislav Starzik",
   "license": "Apache-2.0",
