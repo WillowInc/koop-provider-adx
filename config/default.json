@@ -1,5 +1,13 @@
 {
   "adx": {
-    "clusterUrl": ""
-  }
+    "clusterUrl": "",
+    "database": "",
+    "userId": "",
+    "password": ""
+  },
+"resultRecordCount": 100000,
+"resultOffset" : 0,
+"idField": "id",
+"LatitudeColumn": "",
+"LongitudeColumn" : ""
 }

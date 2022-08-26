@@ -1,8 +1,9 @@
-const config = require('config');
+const config = require('config')
+const AdxQuery = require('./adx/adxQuery')
 
-function Model(koop) {}
+function Model (koop) {}
 
-// Public function to return data from the
+// Public function to return data
 // Return: GeoJSON FeatureCollection
 //
 // Config parameters (config/default.json)
@@ -13,11 +14,20 @@ function Model(koop) {}
 // req.params.id  (if index.js:disableIdParam false)
 // req.params.layer
 // req.params.method
-Model.prototype.getData = function (req, callback) {
-  console.log('Lets just confirm this works.');
+Model.prototype.getData = async function (req, callback) {
+  const tableName = req.params.id
+  const limit = req.query.resultRecordCount || config.resultRecordCount
+  const offset = req.query.resultOffset || config.resultOffset
+  const countOnly = req.query.returnCountOnly || false
 
-  // hand off the data to Koop
-  callback(null, {});
-};
+  if (countOnly) {
+    const count = await AdxQuery.getCount(tableName)
+    callback(null, { count })
+  }
 
-module.exports = Model;
+  // query table
+  const geoJson = await AdxQuery.GetDataWithOffset(tableName, offset, limit)
+  callback(null, geoJson)
+}
+
+module.exports = Model
