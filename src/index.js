@@ -7,7 +7,7 @@ const provider = {
   hosts: false, // if true, also adds disableIdParam
   disableIdParam: false, // if true, adds to path and req.params
   Model: require('./model'),
-  version: require('../package.json').version,
-};
+  version: require('../package.json').version
+}
 
-module.exports = provider;
+module.exports = provider
