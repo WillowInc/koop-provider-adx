@@ -1,7 +1,7 @@
 {
-  "name": "koop-provider-sample",
-  "version": "1.0.0",
-  "description": "A sample provider for koop",
+  "name": "koop-provider-adx",
+  "version": "0.1.0",
+  "description": "An ADX provider for koop",
   "main": "src/index.js",
   "directories": {
     "test": "test"
@@ -15,7 +15,7 @@
     "koop": "^3.17.0",
     "request": "^2.88.0"
   },
-  "author": "Daniel Fenton",
+  "author": "Mislav Starzik",
   "license": "Apache-2.0",
   "devDependencies": {
     "@koopjs/cli": "^0.6.0",
@@ -26,15 +26,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koopjs/koop-provider-sample.git"
+    "url": "git+https://https://github.com/mislavs/koop-provider-adx.git"
   },
   "bugs": {
-    "url": "https://github.com/koopjs/koop-provider-sample/issues"
+    "url": "https://https://github.com/mislavs/koop-provider-adx/issues"
   },
-  "homepage": "https://github.com/koopjs/koop-provider-sample",
+  "homepage": "https://https://github.com/mislavs/koop-provider-adx",
   "keywords": [
     "koop",
     "provider",
-    "sample"
+    "adx"
   ]
 }
